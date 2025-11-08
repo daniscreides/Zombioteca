@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'Nosifer'; 
-    src: url('../fonts/Nosifer-Regular.ttf') format('opentype');
+    src: url('../fonts/Nosifer-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-Italic-Variable.ttf') format('opentype');
+    src: url('../fonts/WorkSans-Italic-Variable.ttf') format('truetype');
 }
 
 :root {    
@@ -74,6 +74,7 @@ header h1 {
 }
 
 .navegacao ul {
+    font-size: 1.4em;
     list-style: none;
     margin-bottom: 3em;
     padding: 1em;
@@ -84,14 +85,13 @@ header h1 {
 }
 
 .navegacao li {
-    font-size: 1.1em;
     padding: 0.5em 1em;
-    margin: 0 3em;
+    margin: 0;
     display: inline-block;
 }
 
 .navegacao a {
-    font-size: 1.2em;
+
     text-decoration: none;
     color: var(--cor02);
 }
@@ -132,6 +132,13 @@ header h1 {
   width: 100%;
   box-sizing: border-box;
   padding-bottom: 5em;
+}
+
+.ultimalinha {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
 }
 
 .video {
