@@ -25,7 +25,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -33,6 +32,7 @@ body {
   background-color: #000;
   margin: 2em;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 a {
@@ -47,9 +47,9 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: #000;
-  margin: 0 auto 2.5em auto;
+  margin: 0 auto 1em auto;
   padding: 1.5em 2em;
-  width: 95%;
+  width: 85%;
   border-radius: 0.5em;
   box-shadow: 0 0 15px var(--cor02);
 }
@@ -58,29 +58,32 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 header img.logo {
+  flex-shrink: 0;
   width: 6em;
   height: auto;
 }
 
 header h1 {
-  font-size: 5em;
   color: var(--cor02);
   letter-spacing: 3px;
   margin: 0;
-  word-break: break-word;
+  word-break: keep-all;
+  font-size: clamp(3em, 5vw, 5em); /* 🔹 diminui automaticamente em telas pequenas */
+  white-space: nowrap; /* 🔹 impede quebra do texto */
 }
 
 /* ====== MENU ====== */
 .navegacao ul {
   font-size: 1.4em;
   list-style: none;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -91,10 +94,12 @@ header h1 {
 .navegacao li {
   padding: 0.5em 1em;
   margin: 0;
+  display: inline-block;
 }
 
 .navegacao a {
   color: var(--cor02);
+  text-decoration: none;
 }
 
 .navegacao li:hover {
@@ -110,29 +115,29 @@ header h1 {
 }
 
 .introducao h2 {
-  font-size: 3em;
+  font-size: 3.5em;
   margin-bottom: 0.2em;
 }
 
 .introducao p {
-  font-size: 1em;   
+  font-size: 1.5em;   
 }
 
 /* ====== GRADE DE VÍDEOS ====== */
 .lista {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: var(--cor02);
   text-align: center;
-  padding: 3em;
+  padding: 2em;
 }
 
 .grade {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 🔹 ajusta automaticamente */
-  gap: 2em;
+  gap: 2.2em;
   justify-items: center;
   width: 100%;
-  padding-bottom: 5em;
+  padding-bottom: 5em;  
 }
 
 .video {
@@ -204,7 +209,7 @@ footer {
 }
 
 .contatos h3, .creditos h3 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin: 0;
   padding-bottom: 1em;
 }
@@ -225,8 +230,8 @@ footer {
 }
 
 .socialicon {
-  width: 3.5em;
-  height: 3.5em;
+  width: 4em;
+  height: 4em;
   object-fit: contain;
 }
 
@@ -236,6 +241,18 @@ footer {
 @media (max-width: 1024px) {
   header h1 {
     font-size: 3.5em;
+  }
+
+  .introducao h2 {
+    font-size: 2.5em;
+  }
+
+  .introducao p {
+    font-size: 1.1em;
+  }
+
+  .lista h2 {
+  font-size: 1.5em;
   }
 
   .grade {
@@ -248,42 +265,88 @@ footer {
 }
 
 /* Celulares grandes */
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   header h1 {
-    font-size: 3em;
-  }
-
-  .navegacao ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-  }
-}
-
-/* Celulares médios e pequenos */
-@media (max-width: 500px) {
-  body {
-    margin: 1em;
-  }
-
-  header img.logo {
-    width: 4em;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  .logotitulo {
-    flex-direction: column;
-    gap: 0.3em;
-  }
-
-  .navegacao a {
-    font-size: 1.1em;
+    font-size: 1.9em;
   }
 
   .introducao h2 {
+    font-size: 1.8em;
+  }
+
+  .introducao p {
+    font-size: 1.1em;
+  }
+
+  .navegacao ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 🔹 2 colunas */
+    justify-items: center;
+    align-items: center;
+    gap: 0.8em 1em;
+    padding: 0.5em;
+  }
+
+  .navegacao li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navegacao a {
+    font-size: 1em;
+  }
+}
+
+.lista h2 {
+  font-size: 1.2em;
+}
+
+/* Celulares médios e pequenos */
+@media (max-width: 450px) {
+  body {
+    margin: 0.5em;
+  }
+
+  header {
+    width: 100%;
+    padding: 1.2em;
+    box-sizing: border-box;
+    overflow: hidden; /* 🔹 impede conteúdo de ultrapassar a borda */
+  }
+
+  .logotitulo {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    flex-wrap: nowrap;
+  }
+
+  header img.logo {
+    width: 3em; /* 🔹 tamanho mais equilibrado */
+    height: auto;
+    flex-shrink: 0; /* 🔹 evita deformar */
+  }
+
+  header h1 {
+    font-size: clamp(1.2em, 6vw, 2.5em);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 🔹 evita quebra */
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .introducao h2 {
+    font-size: 1.5em; /* 🔹 título menor */
+  }
+
+  .introducao p {
+    font-size: 1em; /* 🔹 texto mais leve */
+    line-height: 1.4em;
+  }
+
+  .lista h2 {
     font-size: 2em;
   }
 
@@ -298,12 +361,32 @@ footer {
 
 /* Celulares muito pequenos */
 @media (max-width: 320px) {
+  header {
+    padding: 0.8em;
+  }
+
+  header img.logo {
+    width: 2.5em;
+  }
+
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.2em;
+  }
+
+  .introducao h2 {
+    font-size: 1em;
+  }
+
+  .introducao p {
+    font-size: 0.8em;
+  }
+
+  .navegacao ul {
+    grid-template-columns: 1fr; /* 🔹 vira 1 coluna só */
   }
 
   .socialicon {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
   }
 }
