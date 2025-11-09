@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* ====== FONTES ====== */
 @font-face {
   font-family: 'Nosifer'; 
   src: url('../fonts/Nosifer-Regular.ttf') format('truetype');
@@ -10,7 +9,6 @@
   src: url('../fonts/WorkSans-Italic-Variable.ttf') format('truetype');
 }
 
-/* ====== VARIÁVEIS ====== */
 :root {    
   --cor06: #2a2a2a;
   --cor07: #444444; 
@@ -21,7 +19,6 @@
   --fonte-tematico: 'Nosifer';
 }
 
-/* ====== BASE ====== */
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +37,6 @@ a {
   transition: color 0.3s;
 }
 
-/* ====== CABEÇALHO ====== */
 header {
   font-family: var(--fonte-tematico);
   display: flex;
@@ -75,11 +71,10 @@ header h1 {
   letter-spacing: 3px;
   margin: 0;
   word-break: keep-all;
-  font-size: clamp(3em, 5vw, 5em); /* 🔹 diminui automaticamente em telas pequenas */
-  white-space: nowrap; /* 🔹 impede quebra do texto */
+  font-size: clamp(3em, 5vw, 5em);
+  white-space: nowrap;
 }
 
-/* ====== MENU ====== */
 .navegacao ul {
   font-size: 1.4em;
   list-style: none;
@@ -107,7 +102,6 @@ header h1 {
   border-radius: 0.5em;
 }
 
-/* ====== INTRODUÇÃO ====== */
 .introducao {
   text-align: center;
   color: #fff;
@@ -123,7 +117,6 @@ header h1 {
   font-size: 1.5em;   
 }
 
-/* ====== GRADE DE VÍDEOS ====== */
 .lista {
   font-size: 1.8em;
   color: var(--cor02);
@@ -133,7 +126,7 @@ header h1 {
 
 .grade {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 🔹 ajusta automaticamente */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.2em;
   justify-items: center;
   width: 100%;
@@ -177,7 +170,6 @@ header h1 {
   text-align: center;
 }
 
-/* ====== RODAPÉ ====== */
 footer {
   width: 100%;
   margin: 3em auto 0 auto;
@@ -235,9 +227,6 @@ footer {
   object-fit: contain;
 }
 
-/* ====== RESPONSIVIDADE ====== */
-
-/* Tablets */
 @media (max-width: 1024px) {
   header h1 {
     font-size: 3.5em;
@@ -252,7 +241,7 @@ footer {
   }
 
   .lista h2 {
-  font-size: 1.5em;
+    font-size: 1.5em;
   }
 
   .grade {
@@ -264,7 +253,6 @@ footer {
   }
 }
 
-/* Celulares grandes */
 @media (max-width: 700px) {
   header h1 {
     font-size: 1.9em;
@@ -280,7 +268,7 @@ footer {
 
   .navegacao ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 🔹 2 colunas */
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     gap: 0.8em 1em;
@@ -301,7 +289,6 @@ footer {
   font-size: 1.2em;
 }
 
-/* Celulares médios e pequenos */
 @media (max-width: 450px) {
   body {
     margin: 0.5em;
@@ -311,7 +298,7 @@ footer {
     width: 100%;
     padding: 1.2em;
     box-sizing: border-box;
-    overflow: hidden; /* 🔹 impede conteúdo de ultrapassar a borda */
+    overflow: hidden;
   }
 
   .logotitulo {
@@ -323,26 +310,26 @@ footer {
   }
 
   header img.logo {
-    width: 3em; /* 🔹 tamanho mais equilibrado */
+    width: 3em;
     height: auto;
-    flex-shrink: 0; /* 🔹 evita deformar */
+    flex-shrink: 0;
   }
 
   header h1 {
     font-size: clamp(1.2em, 6vw, 2.5em);
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* 🔹 evita quebra */
+    text-overflow: ellipsis;
     max-width: 100%;
     text-align: center;
   }
 
   .introducao h2 {
-    font-size: 1.5em; /* 🔹 título menor */
+    font-size: 1.5em;
   }
 
   .introducao p {
-    font-size: 1em; /* 🔹 texto mais leve */
+    font-size: 1em;
     line-height: 1.4em;
   }
 
@@ -359,7 +346,6 @@ footer {
   }
 }
 
-/* Celulares muito pequenos */
 @media (max-width: 320px) {
   header {
     padding: 0.8em;
@@ -382,7 +368,7 @@ footer {
   }
 
   .navegacao ul {
-    grid-template-columns: 1fr; /* 🔹 vira 1 coluna só */
+    grid-template-columns: 1fr;
   }
 
   .socialicon {
