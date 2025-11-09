@@ -1,144 +1,138 @@
 @charset "UTF-8";
 
+/* ====== FONTES ====== */
 @font-face {
-    font-family: 'Nosifer'; 
-    src: url('../fonts/Nosifer-Regular.ttf') format('truetype');
+  font-family: 'Nosifer'; 
+  src: url('../fonts/Nosifer-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Work Sans';
-    src: url('../fonts/WorkSans-Italic-Variable.ttf') format('truetype');
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans-Italic-Variable.ttf') format('truetype');
 }
 
+/* ====== VARIÁVEIS ====== */
 :root {    
-    --cor06: #2a2a2a;
-    --cor07: #444444; 
-    --cor03: #5C0000;
-    --cor02: #C1121F;
-    --cor05: #ff4d4d;
-
-    --fonte-padrao: 'Work Sans', Arial, Helvetica, sans-serif;
-    --fonte-tematico: 'Nosifer';
-    
+  --cor06: #2a2a2a;
+  --cor07: #444444; 
+  --cor03: #5C0000;
+  --cor02: #C1121F;
+  --cor05: #ff4d4d;
+  --fonte-padrao: 'Work Sans', Arial, Helvetica, sans-serif;
+  --fonte-tematico: 'Nosifer';
 }
 
+/* ====== BASE ====== */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--fonte-padrao);
-    background-color: #000000;
-    margin: 2em;
-    overflow-x: hidden;    
+  font-family: var(--fonte-padrao);
+  background-color: #000;
+  margin: 2em;
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    transition: color 0.3s;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
+/* ====== CABEÇALHO ====== */
 header {
-    font-family: var(--fonte-tematico);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    margin: 0 auto 2.5em auto;
-    padding: 1.5em 2em;
-    width: 95%;
-    border-radius: 0.5em;
-    box-shadow: 0 0 15px var(--cor02);
+  font-family: var(--fonte-tematico);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  margin: 0 auto 2.5em auto;
+  padding: 1.5em 2em;
+  width: 95%;
+  border-radius: 0.5em;
+  box-shadow: 0 0 15px var(--cor02);
 }
 
 .logotitulo {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 header img.logo {
-    width: 6em;
-    height: auto;
+  width: 6em;
+  height: auto;
 }
 
 header h1 {
-    font-size: 5em;
-    color: var(--cor02);
-    letter-spacing: 3px;
-    margin: 0;
-    word-break: break-word;
+  font-size: 5em;
+  color: var(--cor02);
+  letter-spacing: 3px;
+  margin: 0;
+  word-break: break-word;
 }
 
+/* ====== MENU ====== */
 .navegacao ul {
-    font-size: 1.4em;
-    list-style: none;
-    margin-bottom: 3em;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
+  font-size: 1.4em;
+  list-style: none;
+  margin-bottom: 3em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 .navegacao li {
-    padding: 0.5em 1em;
-    margin: 0;
-    display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0;
 }
 
 .navegacao a {
-
-    text-decoration: none;
-    color: var(--cor02);
+  color: var(--cor02);
 }
 
 .navegacao li:hover {
-    box-shadow: 0 0 15px var(--cor02);
-    border-radius: 0.5em;
+  box-shadow: 0 0 15px var(--cor02);
+  border-radius: 0.5em;
 }
 
+/* ====== INTRODUÇÃO ====== */
 .introducao {
-    text-align: center;
-    color: #FFFFFF;
-    padding-bottom: 2em;    
+  text-align: center;
+  color: #fff;
+  padding-bottom: 2em;    
 }
 
 .introducao h2 {
-    font-size: 3em;
-    margin-bottom: 0.2em;
+  font-size: 3em;
+  margin-bottom: 0.2em;
 }
 
 .introducao p {
-    font-size: 1em;   
+  font-size: 1em;   
 }
 
+/* ====== GRADE DE VÍDEOS ====== */
 .lista {
-    font-size: 1.5em;
-    color: var(--cor02);
-    text-align: center;
-    padding: 3em;
+  font-size: 1.5em;
+  color: var(--cor02);
+  text-align: center;
+  padding: 3em;
 }
 
 .grade {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 🔹 ajusta automaticamente */
   gap: 2em;
   justify-items: center;
-  justify-content: center;
   width: 100%;
-  box-sizing: border-box;
   padding-bottom: 5em;
-}
-
-.ultimalinha {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  gap: 2em;
 }
 
 .video {
@@ -148,7 +142,12 @@ header h1 {
   border: 3px solid var(--cor07);
   border-radius: 10px;
   padding: 0.5em;
-  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--cor05);
 }
 
 .video img {
@@ -158,126 +157,121 @@ header h1 {
   display: block;
 }
 
-.video:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px var(--cor05);
-}
-
-.video figure {
-    margin: 0;
-    width: 100%;
-}
-
 .video h2 {
-    color: var(--cor05);
-    font-size: 1.2em;
-    text-align: center;
-    margin: 0.5em;
-}
-
-.video h2 span {
-    font-weight: bold;
-    color: var(--cor05);
+  color: var(--cor05);
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0.5em;
 }
 
 .video p {
-    color: #FFFFFF;
-    font-size: 1em;
-    line-height: 1.4;
-    margin: 0.25em;
-    text-align: center;
-    word-wrap: break-word;
-    margin: 0.5em;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0.5em;
+  text-align: center;
 }
 
-.video p:last-child {
-    margin-bottom: 0;
-}
-
+/* ====== RODAPÉ ====== */
 footer {
-    width: 100%;
-    margin: 3em auto 0 auto;
-    background-color: #000000;
-    color: var(--cor07);
-    padding: 20px 0;
-    font-size: 0.9em;
-    box-sizing: border-box;
+  width: 100%;
+  margin: 3em auto 0 auto;
+  background-color: #000;
+  color: var(--cor07);
+  padding: 20px 0;
+  font-size: 0.9em;
 }
 
 .rodape {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;
 }
 
-.creditos {
-    text-align: center;
-}
-
-.autor p {
-    margin: 0;
-    font-size: 1em;
+.creditos, .autor p {
+  text-align: center;
 }
 
 .contatos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.contatos h3,.creditos h3 {
-    font-size: 1.5em;
-    margin: 0;
-    padding-bottom: 1em;
+.contatos h3, .creditos h3 {
+  font-size: 1.5em;
+  margin: 0;
+  padding-bottom: 1em;
 }
 
 .redes {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    justify-content: center;
-    margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
-.emailitem,.socialitem {
-    display: flex;
-    align-items: center;
-    color: inherit;
-    padding-bottom: 1em;
-}
-
-.emailitem:hover,.socialitem:hover {
-    color: #f0f0f0;
+.emailitem, .socialitem {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  padding-bottom: 1em;
 }
 
 .socialicon {
-    width: 3.5em;
-    height: 3.5em;
-    object-fit: contain;
+  width: 3.5em;
+  height: 3.5em;
+  object-fit: contain;
 }
 
-@media (max-width: 800px) {
+/* ====== RESPONSIVIDADE ====== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 3.5em;
+  }
+
   .grade {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  .navegacao ul {
+    font-size: 1.2em;
   }
 }
 
+/* Celulares grandes */
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 3em;
+  }
+
+  .navegacao ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+}
+
+/* Celulares médios e pequenos */
 @media (max-width: 500px) {
   body {
     margin: 1em;
   }
 
-  header h1 {
-    font-size: 2em;
-  }
-
   header img.logo {
     width: 4em;
+  }
+
+  header h1 {
+    font-size: 2em;
   }
 
   .logotitulo {
@@ -285,40 +279,31 @@ footer {
     gap: 0.3em;
   }
 
-  .navegacao ul {
-    grid-template-columns: 2fr;
-    align-items: center;
-    margin-bottom: 2em;
-  }
-
-  .navegacao li {
-    margin: 0.5em 0;
-  }
-
   .navegacao a {
     font-size: 1.1em;
   }
 
-  .redes {
-    flex-wrap: wrap;
+  .introducao h2 {
+    font-size: 2em;
   }
 
   .grade {
-    grid-template-columns: 1fr;
+    gap: 1em;
   }
 
-  .video {
-    width: 100%;
-  }
-
-  .video img {
-    width: 100%;
-    height: auto;
+  footer {
+    font-size: 0.8em;
   }
 }
 
-@media (max-width: 300px) {
+/* Celulares muito pequenos */
+@media (max-width: 320px) {
   header h1 {
-    font-size: 2em;
+    font-size: 1.6em;
+  }
+
+  .socialicon {
+    width: 2.5em;
+    height: 2.5em;
   }
 }
