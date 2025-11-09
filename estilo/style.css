@@ -57,7 +57,6 @@ header {
   align-items: center;
   background-color: #000;
   margin: 0 auto 1em auto;
-  padding: 1.5em 2em;
   width: 75%;
   border-radius: 0.5em;
   box-shadow: 0 0 15px var(--cor02);
@@ -75,7 +74,7 @@ header {
 
 header img.logo {
   flex-shrink: 0;
-  width: 6em;
+  width: 5em;
   height: auto;
 }
 
@@ -84,14 +83,14 @@ header h1 {
   letter-spacing: 3px;
   margin: 0;
   word-break: keep-all;
-  font-size: clamp(3em, 5vw, 5em);
+  font-size: clamp(2em, 4vw, 4em);
   white-space: nowrap;
 }
 
 .navegacao ul {
-  font-size: 1.4em;
+  font-size: 1.2em;
   list-style: none;
-  padding: 1em;
+  padding: 0.8em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -117,21 +116,21 @@ header h1 {
 .introducao {
   text-align: center;
   color: #fff;
-  padding-top: 20em;
-  padding-bottom: 2em;    
+  padding-top: 16em;
+  padding-bottom: 2em;  
 }
 
 .introducao h2 {
-  font-size: 3.5em;
+  font-size: 3em;
   margin-bottom: 0.2em;
 }
 
 .introducao p {
-  font-size: 1.5em;   
+  font-size: 1.2em;   
 }
 
 .lista {
-  font-size: 1.8em;
+  font-size: 1.2em;
   color: var(--cor02);
   text-align: center;
   padding: 2em;
@@ -214,9 +213,9 @@ footer {
 }
 
 .contatos h3, .creditos h3 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin: 0;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .redes {
