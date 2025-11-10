@@ -196,7 +196,6 @@ footer {
   background-color: var(--cor1);
   color: var(--cor3);
   padding: 20px 0;
-  font-size: 0.9em;
 }
 
 .rodape {
@@ -223,7 +222,7 @@ footer {
 }
 
 .creditos h3 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 0;
   padding-bottom: 0.3em;
 }
@@ -244,8 +243,8 @@ footer {
 }
 
 .socialicon {
-  width: 4em;
-  height: 4em;
+  width: 3.8em;
+  height: 3.8em;
   object-fit: contain;
 }
 
@@ -300,9 +299,9 @@ footer {
 
 @media (max-width: 600px) {
   header {
-    width: 90%;
-    max-width: 60em;
-    padding: 1.2em;
+    width: 80%;
+    max-width: 40em;
+    padding: 1em;
   }
 
   header h1 {
@@ -385,9 +384,9 @@ footer {
   }
 
   header {
-    width: 90%;
-    max-width: 60em;
-    padding: 1.2em;
+    width: 70%;
+    max-width: 35em;
+    padding: 1em;
   }
 
   header img.logo {
@@ -467,9 +466,9 @@ footer {
 
 @media (max-width: 300px) {
   header {
-    width: 90%;
-    max-width: 60em;
-    padding: 1.2em;
+    width: 60%;
+    max-width: 30em;
+    padding: 1em;
   }
 
   header img.logo {
