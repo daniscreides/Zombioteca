@@ -10,11 +10,11 @@
 }
 
 :root {    
-  --cor1: #000000;   /* Fundo profundo */
-  --cor2: #1b0000;   /* Bordas e áreas escuras */
-  --cor3: #5c2a2a;   /* Vinho suave para detalhes */
-  --cor4: #b71c1c;   /* Vermelho sangue para títulos e destaques */
-  --cor5: #ff1744;   /* Vermelho neon para hovers e brilhos */
+  --cor1: #000000;
+  --cor2: #1b0000;
+  --cor3: #5c2a2a;
+  --cor4: #b71c1c;
+  --cor5: #ff1744;
 
   --fonte-padrao: 'Work Sans', Arial, Helvetica, sans-serif;
   --fonte-tematico: 'Nosifer';
@@ -55,7 +55,8 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: var(--cor1);
-  margin: 1em auto 1em auto;
+  margin: 0 auto 1em auto;
+  padding: 1em;
   width: 65%;
   border-radius: 0.4em;
   box-shadow: 0 0 1em var(--cor4);
@@ -64,7 +65,7 @@ header {
 .logotitulo {
   display: flex;
   align-items: center;
-  gap: 0.7em;
+  gap: 0.8em;
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
@@ -82,7 +83,7 @@ header h1 {
   letter-spacing: 3px;
   margin: 0;
   word-break: keep-all;
-  font-size: clamp(2em, 4vw, 4em);
+  font-size: clamp(3em, 4vw, 5em);
   white-space: nowrap;
 }
 
@@ -217,7 +218,7 @@ footer {
   font-size: 1.6em;
   margin: 0;
   padding-bottom: 0.5em;
-  color: var(--cor5);
+  color: #ffffff;
 }
 
 .redes {
@@ -332,6 +333,29 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5em;
   }
+
+  .creditos, .autor p {
+    text-align: center;
+  }
+
+  .contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .contatos h3, .creditos h3 {
+    font-size: 1.1em;
+    margin: 0;
+    padding-bottom: 0.5em;
+    color: #ffffff;
+  }
+  .socialicon {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+}
 }
 
 @media (max-width: 400px) {
@@ -392,6 +416,30 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5em;
   }
+
+  .creditos, .autor p {
+    text-align: center;
+  }
+
+  .contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+  }
+
+  .contatos h3, .creditos h3 {
+    font-size: 1em;
+    margin: 0;
+    padding-bottom: 0.4em;
+    color: #ffffff;
+  }
+
+  .socialicon {
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: contain;
+}
 }
 
 @media (max-width: 300px) {
@@ -440,5 +488,29 @@ footer {
   .grade {
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
+  }
+
+  .creditos, .autor p {
+    text-align: center;
+  }
+
+  .contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+  }
+
+  .contatos h3, .creditos h3 {
+    font-size: 0.8em;
+    margin: 0;
+    padding-bottom: 0.3em;
+    color: #ffffff;
+  }
+
+  .socialicon {
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
   }
 }
