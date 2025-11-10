@@ -11,6 +11,35 @@
     @import url('https://fonts.googleapis.com/css2?family=Delius&family=Momo+Trust+Display&family=Nosifer&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
   </style>
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const videos = document.querySelectorAll('.video');
+  
+  videos.forEach(video => {
+    // Quando o dedo toca o item
+    video.addEventListener('touchstart', () => {
+      video.classList.add('hover');
+    });
+    
+    // Quando o dedo desliza para fora ou solta
+    video.addEventListener('touchend', () => {
+      video.classList.remove('hover');
+    });
+
+    // Detecta movimento do dedo (deslizar)
+    video.addEventListener('touchmove', (event) => {
+      const touch = event.touches[0];
+      const element = document.elementFromPoint(touch.clientX, touch.clientY);
+      
+      // se o dedo sair do elemento, remove o hover
+      if (!video.contains(element)) {
+        video.classList.remove('hover');
+      }
+    });
+  });
+});
+</script>
+
 
 <body>
 

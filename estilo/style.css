@@ -10,11 +10,11 @@
 }
 
 :root {    
-  --cor06: #2a2a2a;
-  --cor07: #444444; 
-  --cor03: #5C0000;
-  --cor02: #C1121F;
-  --cor05: #ff4d4d;
+  --cor1: #000000;   /* Fundo profundo */
+  --cor2: #1b0000;   /* Bordas e áreas escuras */
+  --cor3: #5c2a2a;   /* Vinho suave para detalhes */
+  --cor4: #b71c1c;   /* Vermelho sangue para títulos e destaques */
+  --cor5: #ff1744;   /* Vermelho neon para hovers e brilhos */
 
   --fonte-padrao: 'Work Sans', Arial, Helvetica, sans-serif;
   --fonte-tematico: 'Nosifer';
@@ -27,7 +27,7 @@
 
 body {
   font-family: var(--fonte-padrao);
-  background-color: #000;
+  background-color: var(--cor1);
   margin: 2em;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -46,8 +46,7 @@ a {
   width: 100%;
   z-index: 1000;
   padding-top: 2em;
-  background-color: #000;
-
+  background-color: var(--cor1);
 }
 
 header {
@@ -55,17 +54,17 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #000;
-  margin: 0 auto 1em auto;
-  width: 75%;
-  border-radius: 0.5em;
-  box-shadow: 0 0 15px var(--cor02);
+  background-color: var(--cor1);
+  margin: 1em auto 1em auto;
+  width: 65%;
+  border-radius: 0.4em;
+  box-shadow: 0 0 1em var(--cor4);
 }
 
 .logotitulo {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.7em;
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
@@ -75,11 +74,11 @@ header {
 header img.logo {
   flex-shrink: 0;
   width: 5em;
-  height: auto;
+  height: 5em;
 }
 
 header h1 {
-  color: var(--cor02);
+  color: var(--cor4);
   letter-spacing: 3px;
   margin: 0;
   word-break: keep-all;
@@ -93,6 +92,7 @@ header h1 {
   padding: 0.8em;
   display: flex;
   justify-content: center;
+  justify-items: center;
   flex-wrap: wrap;
   gap: 1em;
 }
@@ -104,18 +104,18 @@ header h1 {
 }
 
 .navegacao a {
-  color: var(--cor02);
+  color: var(--cor4);
   text-decoration: none;
 }
 
 .navegacao li:hover {
-  box-shadow: 0 0 15px var(--cor02);
+  box-shadow: 0 0 15px var(--cor5);
   border-radius: 0.5em;
 }
 
 .introducao {
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   padding-top: 16em;
   padding-bottom: 2em;  
 }
@@ -123,6 +123,7 @@ header h1 {
 .introducao h2 {
   font-size: 3em;
   margin-bottom: 0.2em;
+  color: #ffffff;
 }
 
 .introducao p {
@@ -131,7 +132,7 @@ header h1 {
 
 .lista {
   font-size: 1.2em;
-  color: var(--cor02);
+  color: var(--cor4);
   text-align: center;
   padding: 2em;
 }
@@ -148,8 +149,8 @@ header h1 {
 .video {
   width: 100%;
   max-width: 22em;
-  background-color: var(--cor06);
-  border: 3px solid var(--cor07);
+  background-color: var(--cor2);
+  border: 3px solid var(--cor3);
   border-radius: 10px;
   padding: 0.2em;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -157,7 +158,12 @@ header h1 {
 
 .video:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 15px var(--cor05);
+  box-shadow: 0 0 15px var(--cor5);
+}
+
+.video.hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--cor5);
 }
 
 .video img {
@@ -168,7 +174,7 @@ header h1 {
 }
 
 .video h2 {
-  color: var(--cor05);
+  color: var(--cor5);
   font-size: 1.2em;
   text-align: center;
   margin: 0.5em;
@@ -185,8 +191,8 @@ header h1 {
 footer {
   width: 100%;
   margin: 3em auto 0 auto;
-  background-color: #000;
-  color: var(--cor07);
+  background-color: var(--cor1);
+  color: var(--cor3);
   padding: 20px 0;
   font-size: 0.9em;
 }
@@ -216,6 +222,7 @@ footer {
   font-size: 1.6em;
   margin: 0;
   padding-bottom: 0.5em;
+  color: var(--cor5);
 }
 
 .redes {
@@ -237,215 +244,4 @@ footer {
   width: 4em;
   height: 4em;
   object-fit: contain;
-}
-
-@media (max-width: 900px) {
-  header h1 {
-    font-size: 3.5em;
-  }
-
-  .introducao h2 {
-    font-size: 2.2em;
-  }
-
-  .introducao p {
-    font-size: 1.1em;
-  }
-
-  .lista h2 {
-    font-size: 1.3em;
-  }
-
-   .grade {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5em;
-    justify-items: center;
-    align-items: start;
-    box-sizing: border-box;
-  }
-
-  .navegacao ul {
-    font-size: 1.2em;
-  }
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  .introducao h2 {
-    font-size: 1.7em;
-  }
-
-  .introducao p {
-    font-size: 1.1em;
-  }
-
-  .navegacao ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-    gap: 0.8em 1em;
-    padding: 0.5em;
-  }
-
-  .navegacao li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .navegacao a {
-    font-size: 1em;
-  }
-
-  .lista h2 {
-    font-size: 1em;
-  }
-
-  .grade {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-    justify-items: center;
-    align-items: start;
-    box-sizing: border-box;
-  }
-
-  .video {
-    width: 100%;
-    max-width: 500px;
-    height: 620px;
-    background-color: var(--cor06);
-    border: 3px solid var(--cor07);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
-    padding: 0.5em;
-  }
-
-  .video h2 {
-    font-size: 0.9em;
-    margin: 1em 0 0.5em 0;
-    text-align: center;
-  }
-
-  .video p {
-    font-size: 0.8em;
-    padding: 0;
-    text-align: center;
-  }
-
-  .video img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
-
-  footer {
-    font-size: 0.7em;
-  }
-
-}
-
-@media (max-width: 400px) {
-  body {
-    margin: 0.5em;
-  }
-
-  header {
-    width: 100%;
-    padding: 1.2em;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  .logotitulo {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4em;
-    flex-wrap: nowrap;
-  }
-
-  header img.logo {
-    width: 3em;
-    height: auto;
-    flex-shrink: 0;
-  }
-
-  header h1 {
-    font-size: clamp(1.2em, 6vw, 2.5em);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .introducao h2 {
-    font-size: 1.5em;
-  }
-
-  .introducao p {
-    font-size: 1em;
-    line-height: 1.4em;
-  }
-
-  .lista h2 {
-    font-size: 1em;
-  }
-
-  .grade {
-    gap: 1em;
-  }
-
-  footer {
-    font-size: 0.6em;
-  }
-}
-
-@media (max-width: 300px) {
-  header {
-    padding: 0.8em;
-  }
-
-  header img.logo {
-    width: 2.5em;
-  }
-
-  header h1 {
-    font-size: 1.2em;
-  }
-
-  .introducao h2 {
-    font-size: 1em;
-  }
-
-  .introducao p {
-    font-size: 0.8em;
-  }
-
-  .navegacao ul {
-    grid-template-columns: 1fr;
-  }
-
-  .lista h2 {
-    font-size: 0.8em;
-  }
-
-  footer {
-    font-size: 0.5em;
-  }
-
-  .socialicon {
-    width: 2em;
-    height: 2em;
-  }
 }
