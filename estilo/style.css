@@ -191,8 +191,8 @@ header h1 {
 }
 
 footer {
-  width: 100%;
-  margin: 3em auto 0 auto;
+  width: 80%;
+  margin: auto;
   background-color: var(--cor1);
   color: var(--cor3);
   padding: 20px 0;
@@ -202,10 +202,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  gap: 20px;
+  max-width: 30em;
+  margin: auto;
+
 }
 
 .creditos {
@@ -295,6 +294,14 @@ footer {
   .navegacao ul {
     font-size: 1.2em;
   }
+
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30em;
+    margin: auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -305,12 +312,12 @@ footer {
   }
 
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
 
   header img.logo {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.8em;
+    height: 2.8em;
   }
 
   .navegacao ul {
@@ -352,6 +359,14 @@ footer {
     gap: 1.5em;
   }
 
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30em;
+    margin: auto;
+  }
+
   .creditos {
     display: flex;
     flex-direction: column;
@@ -366,7 +381,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 0;
     padding-bottom: 0.5em;
   }
@@ -438,6 +453,14 @@ footer {
     gap: 1.5em;
   }
 
+  .rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30em;
+  margin: auto;
+}
+
   .creditos {
     display: flex;
     flex-direction: column;
@@ -452,7 +475,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin: 0;
     padding-bottom: 0.4em;
   }
@@ -518,6 +541,14 @@ footer {
     gap: 1em;
   }
 
+  .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200em;
+    margin: auto;
+  }
+
   .creditos {
     display: flex;
     flex-direction: column;
@@ -532,7 +563,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 0.6em;
+    font-size: 0.5em;
     margin: 0;
     padding-bottom: 0.3em;
   }
