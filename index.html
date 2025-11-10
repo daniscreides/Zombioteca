@@ -11,41 +11,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Delius&family=Momo+Trust+Display&family=Nosifer&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
   </style>
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll('.video');
-  let active = null;
-
-  videos.forEach(video => {
-    let touchStartY = 0;
-
-    video.addEventListener('touchstart', (e) => {
-      touchStartY = e.touches[0].clientY;
-      video.classList.add('hover');
-      active = video;
-    }, { passive: true });
-
-    video.addEventListener('touchmove', (e) => {
-      const moveY = e.touches[0].clientY;
-      // se o movimento for grande (rolando a tela), cancela o hover
-      if (Math.abs(moveY - touchStartY) > 15 && active) {
-        active.classList.remove('hover');
-        active = null;
-      }
-    }, { passive: true });
-
-    video.addEventListener('touchend', () => {
-      if (active) {
-        setTimeout(() => active.classList.remove('hover'), 200);
-        active = null;
-      }
-    }, { passive: true });
-  });
-});
-</script>
-
-
-
 <body>
 
   <div class="top">
