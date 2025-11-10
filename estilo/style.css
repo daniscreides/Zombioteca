@@ -116,7 +116,7 @@ header h1 {
 .introducao {
   text-align: center;
   color: #ffffff;
-  padding-top: 16em;
+  padding-top: 14em;
   padding-bottom: 2em;  
 }
 
@@ -241,6 +241,7 @@ footer {
   object-fit: contain;
 }
 
+
 @media (max-width: 900px) {
   header h1 {
     font-size: 3.5em;
@@ -285,12 +286,12 @@ footer {
 
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   header img.logo {
-    width: 2.8em;
-    height: 2.8em;
+    width: 2.5em;
+    height: 2.5em;
   }
 
   .navegacao ul {
@@ -298,11 +299,14 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.6em;
+    gap: 0.4em;
     padding: 0.5em;
   }
 
   .navegacao li {
+    padding: 0.4em;
+    margin: 0;
+    display: inline-block;
     width: auto;
     text-align: center;
   }
@@ -310,6 +314,23 @@ footer {
   .navegacao a {
     font-size: 0.8em;
     white-space: nowrap;
+  }
+
+  .introducao h2 {
+    font-size: 1.5em;
+  }
+
+  .introducao p {
+    font-size: 1em;
+  }
+
+  .lista h2 {
+    font-size: 1.1em;
+  }
+
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
   }
 }
 
@@ -324,7 +345,8 @@ footer {
   }
 
   header img.logo {
-    width: 3em;
+    width: 2em;
+    height: 2em;
   }
 
   header h1 {
@@ -337,11 +359,14 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 0.2em;
     padding: 0.4em;
   }
 
   .navegacao li {
+    padding: 0.2em;
+    margin: 0;
+    display: inline-block;
     width: auto;
     text-align: center;
   }
@@ -350,15 +375,32 @@ footer {
     font-size: 0.7em;
     white-space: nowrap;
   }
+
+  .introducao h2 {
+    font-size: 1.5em;
+  }
+
+  .introducao p {
+    font-size: 0.8em;
+  }
+
+  .lista h2 {
+    font-size: 1em;
+  }
+
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
 }
 
 @media (max-width: 300px) {
   header img.logo {
-    width: 2.5em;
+    width: 2em;
   }
 
   header h1 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .navegacao ul {
@@ -366,17 +408,37 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.4em;
+    gap: 0.2em;
     padding: 0.3em;
   }
 
   .navegacao li {
-    width: auto;
-    text-align: center;
+  padding: 0.2em;
+  margin: 0;
+  display: inline-block;
+  width: auto;
+  text-align: center;
   }
 
   .navegacao a {
     font-size: 0.6em;
     white-space: nowrap;
+  }
+
+  .introducao h2 {
+    font-size: 1.2em;
+  }
+
+  .introducao p {
+    font-size: 0.7em;
+  }
+
+  .lista h2 {
+    font-size: 0.9em;
+  }
+
+  .grade {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
   }
 }
