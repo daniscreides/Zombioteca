@@ -20,25 +20,25 @@
   --fonte-tematico: 'Nosifer';
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
-}
-
-*, *::before, *::after {
   box-sizing: border-box;
-}
-
-* {
-  outline: 1px solid red; /* temporário — mostra quem está vazando da tela */
 }
 
 body {
   font-family: var(--fonte-padrao);
   background-color: var(--cor1);
-  margin: 2em;
   overflow-x: hidden;
   box-sizing: border-box;
+  margin-top: 5em;
+  padding: 2em;
 }
 
 a {
@@ -67,7 +67,7 @@ header {
   background-color: var(--cor1);
   margin: 0 auto 1em auto;
   padding: 1em;
-  width: 90%;
+  width: 80%;
   border-radius: 0.4em;
   box-shadow: 0 0 1em var(--cor4);
   max-width: 100%;
@@ -92,7 +92,7 @@ header img.logo {
 
 header h1 {
   color: var(--cor4);
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
   margin: 0;
   word-break: keep-all;
   font-size: clamp(3em, 4vw, 5em);
@@ -108,7 +108,7 @@ header h1 {
   justify-content: center;
   justify-items: center;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 2em;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -125,7 +125,7 @@ header h1 {
 }
 
 .navegacao li:hover {
-  box-shadow: 0 0 15px var(--cor5);
+  box-shadow: 0 0 1em var(--cor5);
   border-radius: 0.5em;
 }
 
@@ -157,34 +157,34 @@ header h1 {
 
 .grade {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15.6em, 1fr));
   gap: 2.2em;
   justify-items: center;
   width: 100%;
-  padding-bottom: 5em; 
+  padding-bottom: 5em;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 .video {
   width: 100%;
   max-width: 22em;
   background-color: var(--cor2);
-  border: 3px solid var(--cor3);
-  border-radius: 10px;
+  border: 0.2em solid var(--cor3);
+  border-radius: 0.6em;
   padding: 0.2em;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .video:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 15px var(--cor5);
+  box-shadow: 0 0 1em var(--cor5);
 }
 
 .video img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5em;
   display: block;
 }
 
@@ -208,7 +208,7 @@ footer {
   margin: auto;
   background-color: var(--cor1);
   color: var(--cor3);
-  padding: 20px 0;
+  padding: 1.3em 0;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -220,7 +220,6 @@ footer {
   margin: auto;
   max-width: 100%;
   overflow-x: hidden;
-
 }
 
 .creditos {
@@ -230,10 +229,10 @@ footer {
   gap: 0.5em;
   color: #ffffff;
 }
-  
+
 .autor p {
-    text-align: center;
-    color: #ffffff6d;
+  text-align: center;
+  color: #ffffff6d;
 }
 
 .creditos h3 {
@@ -263,8 +262,7 @@ footer {
   object-fit: contain;
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 56.25em) {
   header {
     width: 90%;
     max-width: 60em;
@@ -320,7 +318,7 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   body {
     margin: 0;
     padding: 0.8em;
@@ -414,188 +412,6 @@ footer {
   .socialicon {
     width: 3em;
     height: 3em;
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 400px) {
-  body {
-    margin: 0.5em;
-  }
-
-  header {
-    width: 70%;
-    max-width: 35em;
-    padding: 1em;
-  }
-
-  header img.logo {
-    width: 2em;
-    height: 2em;
-  }
-
-  header h1 {
-    font-size: clamp(1em, 3vw, 2em);
-    text-align: center;
-  }
-
-  .navegacao ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.2em;
-    padding: 0.4em;
-  }
-
-  .navegacao li {
-    padding: 0.2em;
-    margin: 0;
-    display: inline-block;
-    width: auto;
-    text-align: center;
-  }
-
-  .navegacao a {
-    font-size: 0.7em;
-    white-space: nowrap;
-  }
-
-  .introducao h2 {
-    font-size: 1.5em;
-  }
-
-  .introducao p {
-    font-size: 0.8em;
-  }
-
-  .lista h2 {
-    font-size: 1em;
-  }
-
-  .grade {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
-  }
-
-  .rodape {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 30em;
-  margin: auto;
-  }
-
-  .creditos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4em;
-    color: #ffffff;
-  }
-  
-  .autor p {
-    text-align: center;
-    color: #ffffff6d;
-  }
-
-  .creditos h3 {
-    font-size: 0.8em;
-    margin: 0;
-    padding-bottom: 0.4em;
-  }
-
-  .socialicon {
-    width: 2.5em;
-    height: 2.5em;
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 300px) {
-  header {
-    width: 60%;
-    max-width: 30em;
-    padding: 1em;
-  }
-
-  header img.logo {
-    width: 2em;
-  }
-
-  header h1 {
-    font-size: 1em;
-  }
-
-  .navegacao ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.2em;
-    padding: 0.3em;
-  }
-
-  .navegacao li {
-  padding: 0.2em;
-  margin: 0;
-  display: inline-block;
-  width: auto;
-  text-align: center;
-  }
-
-  .navegacao a {
-    font-size: 0.6em;
-    white-space: nowrap;
-  }
-
-  .introducao h2 {
-    font-size: 1.2em;
-  }
-
-  .introducao p {
-    font-size: 0.7em;
-  }
-
-  .lista h2 {
-    font-size: 0.9em;
-  }
-
-  .grade {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1em;
-  }
-
-  .rodape {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200em;
-    margin: auto;
-  }
-
-  .creditos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2em;
-    color: #ffffff;
-  }
-  
-  .autor p {
-    text-align: center;
-    color: #ffffff6d;
-  }
-
-  .creditos h3 {
-    font-size: 0.6em;
-    margin: 0;
-    padding-bottom: 0.3em;
-  }
-
-  .socialicon {
-    width: 2em;
-    height: 2em;
     object-fit: contain;
   }
 }
