@@ -251,6 +251,12 @@ footer {
 
 
 @media (max-width: 900px) {
+  header {
+    width: 90%;
+    max-width: 60em;
+    padding: 1.2em;
+  }
+
   header h1 {
     font-size: 3.5em;
     margin: 1em auto 1em auto;
@@ -293,6 +299,12 @@ footer {
 }
 
 @media (max-width: 600px) {
+  header {
+    width: 90%;
+    max-width: 60em;
+    padding: 1.2em;
+  }
+
   header h1 {
     font-size: 1.5em;
   }
@@ -355,7 +367,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 1.1em;
+    font-size: 1.5em;
     margin: 0;
     padding-bottom: 0.5em;
   }
@@ -373,7 +385,8 @@ footer {
   }
 
   header {
-    width: 100%;
+    width: 90%;
+    max-width: 60em;
     padding: 1.2em;
   }
 
@@ -453,6 +466,12 @@ footer {
 }
 
 @media (max-width: 300px) {
+  header {
+    width: 90%;
+    max-width: 60em;
+    padding: 1.2em;
+  }
+
   header img.logo {
     width: 2em;
   }
