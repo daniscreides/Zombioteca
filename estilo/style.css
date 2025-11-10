@@ -25,6 +25,10 @@
   padding: 0;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--fonte-padrao);
   background-color: var(--cor1);
@@ -57,7 +61,8 @@ header {
   background-color: var(--cor1);
   margin: 0 auto 1em auto;
   padding: 1em;
-  width: 65%;
+  width: 90%;
+  max-width: 60em;
   border-radius: 0.4em;
   box-shadow: 0 0 1em var(--cor4);
 }
@@ -84,7 +89,8 @@ header h1 {
   margin: 0;
   word-break: keep-all;
   font-size: clamp(3em, 4vw, 5em);
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
 }
 
 .navegacao ul {
@@ -203,22 +209,23 @@ footer {
   gap: 20px;
 }
 
-.creditos, .autor p {
-  text-align: center;
-}
-
-.contatos {
+.creditos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0.5em;
+  color: #ffffff;
+}
+  
+.autor p {
+    text-align: center;
+    color: #ffffff6d;
 }
 
-.contatos h3, .creditos h3 {
-  font-size: 1.6em;
+.creditos h3 {
+  font-size: 2em;
   margin: 0;
-  padding-bottom: 0.5em;
-  color: #ffffff;
+  padding-bottom: 0.3em;
 }
 
 .redes {
@@ -334,23 +341,25 @@ footer {
     gap: 1.5em;
   }
 
-  .creditos, .autor p {
-    text-align: center;
-  }
-
-  .contatos {
+  .creditos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
+    color: #ffffff;
+  }
+  
+  .autor p {
+    text-align: center;
+    color: #ffffff6d;
   }
 
-  .contatos h3, .creditos h3 {
+  .creditos h3 {
     font-size: 1.1em;
     margin: 0;
     padding-bottom: 0.5em;
-    color: #ffffff;
   }
+
   .socialicon {
     width: 3em;
     height: 3em;
@@ -417,29 +426,30 @@ footer {
     gap: 1.5em;
   }
 
-  .creditos, .autor p {
-    text-align: center;
-  }
-
-  .contatos {
+  .creditos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.4em;
+    color: #ffffff;
+  }
+  
+  .autor p {
+    text-align: center;
+    color: #ffffff6d;
   }
 
-  .contatos h3, .creditos h3 {
-    font-size: 1em;
+  .creditos h3 {
+    font-size: 0.8em;
     margin: 0;
     padding-bottom: 0.4em;
-    color: #ffffff;
   }
 
   .socialicon {
     width: 2.5em;
     height: 2.5em;
     object-fit: contain;
-}
+  }
 }
 
 @media (max-width: 300px) {
@@ -490,22 +500,23 @@ footer {
     gap: 1em;
   }
 
-  .creditos, .autor p {
-    text-align: center;
-  }
-
-  .contatos {
+  .creditos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3em;
+    gap: 0.2em;
+    color: #ffffff;
+  }
+  
+  .autor p {
+    text-align: center;
+    color: #ffffff6d;
   }
 
-  .contatos h3, .creditos h3 {
-    font-size: 0.8em;
+  .creditos h3 {
+    font-size: 0.6em;
     margin: 0;
     padding-bottom: 0.3em;
-    color: #ffffff;
   }
 
   .socialicon {
