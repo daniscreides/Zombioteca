@@ -390,7 +390,7 @@ footer {
     width: 3em;
     height: 3em;
     object-fit: contain;
-}
+  }
 }
 
 @media (max-width: 400px) {
@@ -459,7 +459,7 @@ footer {
   align-items: center;
   max-width: 30em;
   margin: auto;
-}
+  }
 
   .creditos {
     display: flex;
