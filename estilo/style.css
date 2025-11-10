@@ -29,6 +29,10 @@
   box-sizing: border-box;
 }
 
+* {
+  outline: 1px solid red; /* temporário — mostra quem está vazando da tela */
+}
+
 body {
   font-family: var(--fonte-padrao);
   background-color: var(--cor1);
@@ -51,6 +55,8 @@ a {
   z-index: 1000;
   padding-top: 2em;
   background-color: var(--cor1);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -62,19 +68,20 @@ header {
   margin: 0 auto 1em auto;
   padding: 1em;
   width: 90%;
-  max-width: 60em;
   border-radius: 0.4em;
   box-shadow: 0 0 1em var(--cor4);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .logotitulo {
   display: flex;
   align-items: center;
   gap: 0.8em;
-  flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 header img.logo {
@@ -102,6 +109,8 @@ header h1 {
   justify-items: center;
   flex-wrap: wrap;
   gap: 1em;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .navegacao li {
@@ -124,7 +133,9 @@ header h1 {
   text-align: center;
   color: #ffffff;
   padding-top: 15em;
-  padding-bottom: 2em;  
+  padding-bottom: 2em;
+  max-width: 100%;
+  overflow-x: hidden; 
 }
 
 .introducao h2 {
@@ -150,7 +161,9 @@ header h1 {
   gap: 2.2em;
   justify-items: center;
   width: 100%;
-  padding-bottom: 5em;  
+  padding-bottom: 5em; 
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .video {
@@ -196,14 +209,17 @@ footer {
   background-color: var(--cor1);
   color: var(--cor3);
   padding: 20px 0;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .rodape {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 30em;
   margin: auto;
+  max-width: 100%;
+  overflow-x: hidden;
 
 }
 
@@ -305,10 +321,17 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0.8em;
+  }
+
   header {
-    width: 80%;
-    max-width: 40em;
     padding: 1em;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
   }
 
   header h1 {
@@ -316,8 +339,8 @@ footer {
   }
 
   header img.logo {
-    width: 2.8em;
-    height: 2.8em;
+    width: 3em;
+    height: 3em;
   }
 
   .navegacao ul {
@@ -356,15 +379,17 @@ footer {
 
   .grade {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5em;
+    gap: 1em;
   }
 
   .rodape {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 30em;
-    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0;
   }
 
   .creditos {
@@ -381,7 +406,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin: 0;
     padding-bottom: 0.5em;
   }
@@ -475,7 +500,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 0.6em;
+    font-size: 0.8em;
     margin: 0;
     padding-bottom: 0.4em;
   }
@@ -563,7 +588,7 @@ footer {
   }
 
   .creditos h3 {
-    font-size: 0.5em;
+    font-size: 0.6em;
     margin: 0;
     padding-bottom: 0.3em;
   }
