@@ -378,7 +378,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.3em;
+    gap: 0.2em;
     padding-top: 0.3em;
     margin-top: 0.5em;
   }
@@ -397,7 +397,7 @@ footer {
   }
 
   .introducao{
-    padding-top: 10em;
+    padding-top: 11em;
   }
 
   .introducao h2 {
@@ -508,7 +508,7 @@ footer {
     white-space: nowrap;
   }
 
-  .introducao{
+  .introducao {
     padding-top: 11em;
   }
 
