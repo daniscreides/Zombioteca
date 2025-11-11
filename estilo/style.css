@@ -391,24 +391,24 @@ footer {
   }
 
   .navegacao a {
-    font-size: 0.7em;
+    font-size: 0.8em;
     white-space: nowrap;
   }
 
   .introducao{
-    padding-top: 11em;
+    padding-top: 10em;
   }
 
   .introducao h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   .introducao p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .lista h2 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .grade {
@@ -503,7 +503,7 @@ footer {
   }
 
   .navegacao a {
-    font-size: 0.7em;
+    font-size: 0.8em;
     white-space: nowrap;
   }
 
@@ -512,20 +512,20 @@ footer {
   }
 
   .introducao h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   .introducao p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .lista h2 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .grade {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    gap: 0.8em;
   }
 
   .rodape {
