@@ -455,77 +455,111 @@ footer {
 @media (max-width: 26em) {
   body {
     margin: 0;
-    padding: 0.5em;
+    padding: 0.8em;
   }
 
   header {
-    width: 95%;
-    padding: 0.8em;
-    border-radius: 0.2em;
+    width: 80%;
+    max-width: 60em;
+    padding: 1em;
+    margin: 0 auto;
+    border-radius: 0.3em;
   }
 
   header h1 {
-    font-size: 1em;
-    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
   }
-
+  
   .logotitulo {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 0.2em;
+    gap: 0.3em;
+    flex-wrap: nowrap;
   }
 
   header img.logo {
-    width: 2em;
-    height: 2em;
+    width: 2.3em;
+    height: 2.3em;
   }
 
   .navegacao ul {
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
-    gap: 0.2em;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    padding-top: 0.3em;
+    margin-top: 0.5em;
   }
 
-  .navegacao a {
-    font-size: 0.65em;
-  }
-
-  .introducao {
-    padding-top: 8em;
-  }
-
-  .introducao h2 {
-    font-size: 1.2em;
+  .navegacao li {
+    padding: 0.3em;
+    margin: 0;
+    display: inline-block;
+    width: auto;
     text-align: center;
   }
 
-  .introducao p {
-    font-size: 0.85em;
-    text-align: justify;
+  .navegacao a {
+    font-size: 0.7em;
+    white-space: nowrap;
   }
 
-  .grade {
-    grid-template-columns: 1fr;
-    gap: 0.8em;
+  .introducao{
+    padding-top: 11em;
+  }
+
+  .introducao h2 {
+    font-size: 1.4em;
+  }
+
+  .introducao p {
+    font-size: 0.9em;
   }
 
   .lista h2 {
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
   }
 
   .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 1em 0.5em;
+    max-width: 100%;
+    margin: 0 auto;
     border-radius: 0;
   }
 
+  .creditos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    color: #ffffff;
+  }
+  
+  .autor p {
+    text-align: center;
+    color: #ffffff6d;
+  }
+
   .creditos h3 {
-    font-size: 1em;
+    font-size: 1.1em;
+    margin: 0;
+    padding-bottom: 0.5em;
   }
 
   .socialicon {
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
   }
 }
-
