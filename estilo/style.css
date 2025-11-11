@@ -264,7 +264,7 @@ footer {
   object-fit: contain;
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 57em) {
   header {
     width: 90%;
     max-width: 70em;
@@ -340,7 +340,7 @@ footer {
   }
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 38em) {
   body {
     margin: 0;
     padding: 0.8em;
@@ -451,3 +451,81 @@ footer {
     object-fit: contain;
   }
 }
+
+@media (max-width: 26em) {
+  body {
+    margin: 0;
+    padding: 0.5em;
+  }
+
+  header {
+    width: 95%;
+    padding: 0.8em;
+    border-radius: 0.2em;
+  }
+
+  header h1 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .logotitulo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+  }
+
+  header img.logo {
+    width: 2em;
+    height: 2em;
+  }
+
+  .navegacao ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2em;
+  }
+
+  .navegacao a {
+    font-size: 0.65em;
+  }
+
+  .introducao {
+    padding-top: 8em;
+  }
+
+  .introducao h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .introducao p {
+    font-size: 0.85em;
+    text-align: justify;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+    gap: 0.8em;
+  }
+
+  .lista h2 {
+    font-size: 1em;
+  }
+
+  .rodape {
+    width: 100%;
+    padding: 1em 0.5em;
+    border-radius: 0;
+  }
+
+  .creditos h3 {
+    font-size: 1em;
+  }
+
+  .socialicon {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
