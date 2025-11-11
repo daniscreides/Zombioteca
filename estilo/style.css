@@ -267,8 +267,8 @@ footer {
 
 @media (max-width: 56.25em) {
   header {
-    width: 90%;
-    max-width: 50em;
+    width: 100%;
+    max-width: 70em;
     padding: 1em;
     margin: 0 auto;
     border-radius: 0.4em;
@@ -348,7 +348,7 @@ footer {
   }
 
   header {
-    width: 90%;
+    width: 100%;
     max-width: 60em;
     padding: 1em;
     margin: 0 auto;
