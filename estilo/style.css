@@ -169,7 +169,7 @@ header h1 {
 
 .video {
   width: 100%;
-  max-width: 22em;
+  max-width: 18em;
   background-color: var(--cor2);
   border: 0.2em solid var(--cor3);
   border-radius: 0.5em;
@@ -413,8 +413,9 @@ footer {
   }
 
   .grade {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 0.8em;
+    justify-items: center;
   }
 
   .rodape {
@@ -525,8 +526,9 @@ footer {
   }
 
   .grade {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     gap: 0.8em;
+    justify-items: center;
   }
 
   .rodape {
