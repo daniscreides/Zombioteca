@@ -329,20 +329,20 @@ footer {
 
   header {
     padding: 1em;
-    width: 80%;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     border-radius: 0.4em;
   }
 
   header h1 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin: auto;
   }
 
   header img.logo {
-    width: 3em;
-    height: 3em;
+    width: 2.8em;
+    height: 2.8em;
   }
 
   .navegacao ul {
