@@ -303,7 +303,6 @@ footer {
     font-size: 1.3em;
   }
 
-  /* 🔧 Corrigido aqui */
   .grade {
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     gap: 1.5em;
@@ -337,7 +336,7 @@ footer {
   }
 
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin: auto;
   }
 
@@ -351,12 +350,12 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.4em;
-    padding: 0.5em;
+    gap: 0.3em;
+    padding: 0.3em;
   }
 
   .navegacao li {
-    padding: 0.4em;
+    padding: 0.3em;
     margin: 0;
     display: inline-block;
     width: auto;
@@ -369,11 +368,11 @@ footer {
   }
 
   .introducao h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .introducao p {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .lista h2 {
