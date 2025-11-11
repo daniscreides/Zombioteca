@@ -356,7 +356,7 @@ footer {
   }
 
   header h1 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: auto;
   }
   
@@ -369,8 +369,8 @@ footer {
   }
 
   header img.logo {
-    width: 2.2em;
-    height: 2.2em;
+    width: 2.3em;
+    height: 2.3em;
   }
 
   .navegacao ul {
@@ -398,6 +398,7 @@ footer {
 
   .introducao h2 {
     font-size: 1.4em;
+    margin: 0;
   }
 
   .introducao p {
